@@ -1,0 +1,137 @@
+// Home Page Styles
+
+// Hero Content
+.hero-content {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.hero__movie-info {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.35) 30%,
+    rgba(0, 0, 0, 0.45) 40%,
+    rgba(0, 0, 0) 100%
+  );
+  padding: 0 $padding;
+}
+
+.hero__release-date {
+  text-transform: uppercase;
+  color: rgba(#ffffff, 0.7);
+  font-weight: 400;
+  font-size: $md-fs * 0.85;
+  margin-bottom: $spacer-small * 0.25;
+}
+
+.hero__title {
+  text-transform: uppercase;
+  color: white;
+  max-width: 40ch;
+  line-height: $spacer-md * 2;
+  font-weight: 700;
+  font-size: $lg-fs * 2.75;
+  margin-bottom: $spacer-md * 1.25;
+}
+
+.hero__link {
+  background: $blue;
+  font-size: $sm-fs * 1.15;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  padding: $spacer-small * 0.5 $spacer * 1.75;
+  border-radius: 25px;
+  margin-right: $spacer;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $dark-blue;
+    transform: scale(0.95);
+  }
+}
+
+.hero__add,
+.hero__bookmark {
+  background: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: $sm-fs * 1.15;
+  font-weight: 700;
+  transition: all 200ms ease-out;
+
+  svg {
+    $s: 1.75rem;
+    width: $s;
+    height: $s;
+    margin-right: $spacer-small * 0.75;
+    transition: all 200ms ease-out;
+
+    path {
+      fill: white;
+      transition: all 200ms ease-out;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $teal;
+
+    svg path {
+      fill: $teal;
+    }
+  }
+}
+
+
+.hero__bookmark {
+  margin-left: $spacer;
+
+  svg {
+    margin-right: $spacer-small * 0.5;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $yellow;
+
+    svg path {
+      fill: $yellow;
+    }
+  }
+}
+
+.hero__bookmarked {
+  svg {
+    path {
+      fill: $yellow;
+    }
+  }
+}
+
+.hero__rating {
+  color: white;
+  background: $teal;
+  border-radius: 25px;
+  font-size: $sm-fs * 1.15;
+  padding: $spacer-small * 0.5 $spacer * 1.75;
+
+  svg {
+    $s: 1rem;
+    width: $s;
+    height: $s;
+    margin-right: $spacer-small * 0.5;
+  }
+}

@@ -1,0 +1,171 @@
+// Movies List Page Styles
+.list-page {
+  padding: $spacer-lg * 1.75 $padding;
+
+  main {
+    align-items: flex-start;
+  }
+}
+
+.list-page__title {
+  color: white;
+  font-size: $lg-fs * 1.25;
+  margin-bottom: $spacer-md;
+
+  span {
+    color: $blue;
+  }
+}
+
+.movies-container {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacer-md $spacer * 1.25;
+
+  .movie-card__date {
+    margin-bottom: $spacer;
+  }
+
+  .movie-card__rating {
+    margin-top: $spacer-small * 0.75;
+    background: transparent;
+    border: 2px solid $teal;
+    color: $teal;
+    transition: all 200ms ease-out;
+  }
+
+  .movie-card {
+    &:hover {
+      .movie-card__rating {
+        background: $teal;
+        color: white;
+      }
+    }
+  }
+}
+
+.movie-card__edit,
+.movie-card__delete {
+  outline: none;
+  border: 2px solid $teal;
+  background: transparent;
+  color: $teal;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: $spacer-small * 0.25 $spacer;
+  margin-bottom: $spacer-small;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $teal;
+    color: white;
+  }
+}
+
+.movie-card__delete {
+  border-color: $red;
+  color: $red;
+
+  &:hover {
+    cursor: pointer;
+    background: $red;
+    color: white;
+  }
+}
+
+// Movie List Info
+.list-info {
+  width: 30%;
+  background: $blue-gray;
+  border-radius: 5px;
+  padding: $spacer;
+}
+
+.list-info__title {
+  color: white;
+  font-size: $sm-fs * 1.25;
+  margin-bottom: $spacer-small * 1.25;
+}
+
+.list-info__genres {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacer-small;
+}
+
+.list-info__genre {
+  width: fit-content;
+  color: lightgrey;
+  margin-bottom: $spacer-small;
+  text-decoration: none;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $teal;
+    border-radius: 25px;
+    padding: $spacer-small * 0.5 $spacer;
+    color: white;
+  }
+}
+
+.list-info__rec {
+  display: block;
+  width: fit-content;
+  outline: none;
+  border: 2px solid $teal;
+  background: transparent;
+  color: $teal;
+  padding: $spacer-small * 0.5 $spacer;
+  border-radius: 25px;
+  margin: 0 auto;
+  font-size: $sm-fs;
+  transition: all 200ms ease-out;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    background: $teal;
+    color: white;
+  }
+}
+
+.list-page__empty-text {
+  max-width: 70ch;
+  color: $yellow;
+  line-height: $spacer * 1.5;
+  font-size: $sm-fs * 1.25;
+  margin-bottom: $spacer-md;
+
+  span {
+    color: $blue;
+  }
+}
+
+.list-page__empty-link {
+  margin-right: $spacer;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 25px;
+  font-size: $sm-fs;
+  padding: $spacer-small * 0.5 $spacer-md;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    background: $blue;
+    border-color: $blue;
+  }
+}
+
+.rated-card {
+  .hero__bookmark {
+    svg {
+      $s: 2rem;
+      width: $s;
+      height: $s * 1.5;
+    }
+  }
+}

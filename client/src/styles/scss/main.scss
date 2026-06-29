@@ -1,0 +1,64 @@
+// Setup
+@import "setup/reset";
+@import "setup/vars";
+@import "utils/alignments";
+
+// Layout
+@import "./layout/standalone/standalone";
+@import "./layout/navbar/navbar";
+@import "./layout/movie/movie";
+
+// Pages
+@import "./pages/home/home";
+@import "./pages/auth/auth";
+@import "./pages/search/search";
+@import "./pages/movie/movie";
+@import "./pages/genres/genres";
+@import "./pages/settings/settings";
+@import "./pages/movie-list/movie-list";
+@import "./pages/recommendations/recommendations";
+@import "./pages/bookmark-list/bookmark-list";
+
+// Main Styles
+body {
+  overflow-x: hidden;
+  font-family: $font;
+  background: black;
+}
+
+.App {
+  font-family: $font;
+  padding-bottom: $spacer-lg;
+}
+
+.not-found-page__title {
+  color: white;
+  margin-top: $spacer-lg * 1.75;
+  font-size: $lg-fs * 3.5;
+
+  span {
+    color: $blue;
+  }
+}
+
+.not-found-page__text {
+  color: #4d5b67;
+  margin-top: $spacer * 1.5;
+  font-size: $lg-fs;
+}
+
+.not-found-page__link {
+  margin-top: $spacer-md;
+  text-decoration: none;
+  color: white;
+  background: rgba($teal, 0.5);
+  border: 2px solid $teal;
+  padding: $spacer-small * 0.5 $spacer-md * 1.5;
+  border-radius: 25px;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    background: rgba($teal, 0.75);
+    transform: scale(0.95);
+  }
+}

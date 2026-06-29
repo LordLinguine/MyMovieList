@@ -1,0 +1,149 @@
+// Search Page Styles
+.search-page {
+  margin-top: $spacer-lg * 2;
+}
+
+.search-page__title {
+  position: relative;
+  color: white;
+  font-size: $lg-fs * 1.25;
+  text-transform: uppercase;
+  margin-bottom: $spacer * 2.75;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    bottom: -3vh;
+    width: 50%;
+    height: 3px;
+    background: $blue;
+  }
+}
+
+.search-page__search-bar {
+  width: 60vw;
+
+  input {
+    border: 2px solid white;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: $sm-fs * 1.25;
+    font-weight: 600;
+    border-radius: 35px;
+    padding: $spacer-small * 0.75 $spacer;
+    width: 80%;
+    text-align: center;
+    margin-right: $spacer-small;
+    transition: all 200ms ease-out;
+
+    &::placeholder {
+      color: white;
+    }
+
+    &:focus {
+      border-color: $blue;
+    }
+  }
+}
+
+.search-page__search-btn {
+  outline: none;
+  border: none;
+  background: $teal;
+  border-radius: 50%;
+  padding: $spacer-small * 0.5;
+  margin-right: $spacer-small;
+  transition: all 200ms ease-out;
+
+  svg {
+    $s: 2rem;
+    width: $s;
+    height: $s;
+
+    path {
+      color: white;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $dark-blue;
+    transform: scale(0.9);
+  }
+}
+
+.search-page__error {
+  background: $red;
+  color: white;
+  width: 50%;
+  border-radius: 25px;
+  padding: $spacer-small * 0.5 $spacer;
+  transform: translateX(50%);
+  margin-top: $spacer;
+
+  svg {
+    margin-right: $spacer-small * 0.5;
+
+    path {
+      fill: white;
+    }
+  }
+}
+
+// Search Results
+.search-results {
+  width: 100vw;
+  margin-top: $spacer-lg;
+}
+
+.search-results__title {
+  color: grey;
+  text-align: center;
+  font-size: $lg-fs;
+  font-weight: 400;
+  margin-bottom: $spacer-md;
+}
+
+// Search Tabs
+.search-tabs {
+  margin-top: $spacer-lg;
+  gap: 0 $spacer;
+}
+
+.search-tabs__tab {
+  $s: 3rem;
+  outline: none;
+  border: 2px solid white;
+  width: $s;
+  height: $s;
+  color: white;
+  background: transparent;
+  border-radius: 50%;
+  padding: $spacer-small;
+  font-size: $sm-fs * 1.25;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    color: $blue;
+    border-color: $blue;
+  }
+}
+
+.search-tabs__active {
+  background: $blue;
+  border-color: $blue;
+  font-weight: 600;
+
+  &:hover {
+    color: white;
+  }
+}

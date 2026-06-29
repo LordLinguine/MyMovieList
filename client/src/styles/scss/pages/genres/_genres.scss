@@ -1,0 +1,29 @@
+// Genres Page Styles
+.genres-page {
+  padding: $spacer-lg * 1.75 $padding;
+}
+
+.genres-page__title {
+  color: white;
+  font-size: $lg-fs * 1.25;
+  margin-bottom: $spacer-md;
+}
+
+.genres-page__genres {
+  flex-wrap: wrap;
+  gap: $spacer;
+}
+
+.genres-page__link {
+  color: white;
+  background: $blue;
+  border-radius: 25px;
+  padding: $spacer-small * 0.5 $spacer * 1.25;
+  text-decoration: none;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    transform: scale(0.9);
+    background: $dark-blue;
+  }
+}

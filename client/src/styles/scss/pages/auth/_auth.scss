@@ -1,0 +1,191 @@
+// Log In & Sign Up Pages Styles
+.auth-container {
+  width: 100vw;
+  min-height: 80vh;
+  padding-top: $spacer-lg * 2;
+}
+
+// Auth Form
+.auth-form {
+  align-items: flex-start;
+  background: rgba($dark-black, 0.5);
+  width: 65vw;
+  min-height: 60vh;
+  padding: $spacer-md * 1.5 $spacer-md;
+  z-index: 100;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.auth-form__left {
+  width: 45%;
+  margin-right: 10%;
+}
+
+.auth-form__right {
+  width: 45%;
+}
+
+// Left Side
+.auth-form__title {
+  color: white;
+  font-size: $md-fs * 1.25;
+  font-weight: 600;
+  font-family: $font;
+  margin-bottom: $spacer-md;
+}
+
+.auth-form__link {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: $sm-fs;
+  transition: all 200ms ease-out;
+
+  span {
+    color: $blue;
+  }
+
+  &:hover {
+    opacity: 0.65;
+  }
+}
+
+// Auth Form Inputs
+.auth-form__input-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: $spacer;
+}
+
+.auth-form label {
+  color: white;
+  font-size: $sm-fs;
+  font-weight: 500;
+  margin-bottom: $spacer-small;
+}
+
+.auth-form input {
+  outline: none;
+  border: 2px solid white;
+  background: none;
+  width: 100%;
+  padding: $spacer-small * 0.65 $spacer-small * 1.25;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  transition: all 200ms ease-out;
+
+  &:focus {
+    border-color: $blue;
+  }
+
+  &::placeholder {
+    font-weight: 500;
+    color: rgba(white, 0.5);
+  }
+}
+
+.auth-form__error {
+  color: $red;
+  padding: $spacer-small * 0.75 0;
+  font-size: $sm-fs;
+  font-weight: 400;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  line-height: $spacer-small * 1.25;
+
+  svg {
+    margin-right: $spacer-small * 0.5;
+
+    path {
+      fill: $red;
+    }
+  }
+}
+
+.auth-form__error-box {
+  margin-bottom: $spacer-small;
+
+  label {
+    color: $red;
+  }
+
+  input {
+    border: 2px solid $red;
+  }
+}
+
+.auth-form__success-box {
+  input {
+    border: 2px solid $lime;
+  }
+}
+
+.auth-form__submit {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: $blue;
+  color: white;
+  border-radius: 25px;
+  padding: $spacer-small * 0.5 $spacer-md;
+  font-size: $sm-fs;
+  font-weight: 600;
+  margin-top: $spacer-small * 0.5;
+  margin-bottom: $spacer;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $dark-blue;
+  }
+}
+
+// Right Side
+.auth-form__logo {
+  margin-bottom: $spacer-small;
+}
+
+.auth-form hr {
+  border-color: rgba(white, 0.75);
+  width: 90%;
+  border-width: 2px;
+  height: 1vh;
+  margin-bottom: $spacer;
+}
+
+.auth-form__sub-title {
+  color: white;
+  text-align: center;
+  font-size: $sm-fs * 1.5;
+  margin-bottom: $spacer * 1.25;
+}
+
+.auth-form__google {
+  width: 60%;
+  outline: none;
+  border: 2px solid white;
+  background: none;
+  color: white;
+  font-weight: 600;
+  font-size: $sm-fs;
+  padding: $spacer-small * 0.5 $spacer-small;
+  text-align: center;
+  border-radius: 25px;
+  transition: all 200ms ease-out;
+
+  svg {
+    $s: 1.25rem;
+    width: $s;
+    height: $s;
+    margin-right: $spacer-small * 0.5;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: $teal;
+    background: $teal;
+  }
+}

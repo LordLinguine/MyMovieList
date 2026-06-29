@@ -1,0 +1,280 @@
+// Navbar Styles
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: $spacer-small $padding;
+  padding-top: $spacer * 1.5;
+  z-index: 10000;
+}
+
+.navbar__title {
+  color: white;
+  font-size: $md-fs;
+  font-weight: 800;
+  margin-right: $spacer-md;
+
+  span {
+    color: $blue;
+  }
+}
+
+.navbar__link {
+  color: white;
+  opacity: 0.85;
+  text-decoration: none;
+  margin-right: $spacer-small * 1.5;
+  font-weight: 500;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.navbar__search-btn {
+  outline: none;
+  border: none;
+  background: $blue;
+  border-radius: 50%;
+  padding: $spacer-small * 0.5;
+  margin-right: $spacer-small;
+  transition: all 200ms ease-out;
+
+  svg {
+    $s: 1.5rem;
+    width: $s;
+    height: $s;
+
+    path {
+      color: white;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $dark-blue;
+    transform: scale(0.9);
+  }
+}
+
+.navbar__login {
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  font-size: $sm-fs;
+  padding: $spacer-small * 0.5 $spacer-md;
+  text-decoration: none;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    background: $blue;
+    border-color: $blue;
+  }
+}
+
+.navbar__profile {
+  outline: none;
+  border: none;
+  background: $teal;
+  border-radius: 50%;
+  padding: $spacer-small * 0.5;
+  transition: all 200ms ease-out;
+
+  svg {
+    $s: 1.5rem;
+    width: $s;
+    height: $s;
+
+    path,
+    circle {
+      fill: white;
+      stroke: white;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $dark-teal;
+    transform: scale(0.9);
+  }
+}
+
+.navbar__profile-pic {
+  .profile-pic__box {
+    border-color: $blue-gray;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .profile-pic__box {
+      transform: scale(0.9);
+      box-shadow: 0 0 10px 5px rgba(white, 0.25);
+    }
+  }
+}
+
+// Search Bar
+.search-bar {
+  position: relative;
+  margin-right: $spacer-small;
+
+  input {
+    width: 20vw;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 25px;
+    padding: $spacer-small * 0.5 $spacer;
+    margin-right: $spacer-small * 0.75;
+  }
+
+  .navbar__search-btn {
+    margin-right: $spacer-small * 0.5;
+  }
+
+  &__close {
+    background: $teal;
+
+    &:hover {
+      background: $dark-teal;
+    }
+  }
+}
+
+.search-bar__error {
+  position: absolute;
+  left: 0;
+  bottom: -5.5vh;
+  background: $red;
+  font-size: $sm-fs;
+  color: white;
+  width: fit-content;
+  border-radius: 25px;
+  padding: $spacer-small * 0.35 $spacer;
+
+  svg {
+    $s: 1.25rem;
+    width: $s;
+    height: $s;
+    margin-right: $spacer-small * 0.25;
+
+    path {
+      fill: white;
+    }
+  }
+}
+
+// Profile Dropdown
+.profile-dropdown {
+  position: absolute;
+  bottom: -50vh;
+  right: $padding;
+  background: $light-black;
+  width: 20vw;
+  border-radius: 15px;
+  padding: $spacer-small * 1.25;
+  box-shadow: 0 0 15px 10px black;
+
+  hr {
+    border-color: rgba(white, 0.35);
+    border-width: 1.5px;
+    width: 100%;
+    margin: $spacer-small * 1.25 0;
+  }
+}
+
+.profile-dropdown__img-box {
+  margin-bottom: $spacer;
+}
+
+.profile-dropdown__img {
+  background: $teal;
+  border-radius: 50%;
+  margin-right: $spacer-small;
+}
+
+.profile-info__username {
+  color: white;
+  margin-bottom: $spacer-small * 0.5;
+  font-size: $sm-fs * 1.15;
+}
+
+.profile-info__email {
+  color: rgba(white, 0.35);
+  font-size: $sm-fs * 0.9;
+  font-weight: 300;
+}
+
+.profile-link {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  margin-bottom: $spacer-small;
+  border-radius: 25px;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $dark-black;
+    padding: $spacer-small * 0.5;
+
+    .profile-link__right {
+      opacity: 1;
+    }
+  }
+}
+
+.profile-link__icon-box {
+  $s: 2.25rem;
+  width: $s;
+  height: $s;
+  background: rgba(#303030, 0.5);
+  border-radius: 50%;
+  padding: 0 $spacer-small * 0.35;
+  margin-right: $spacer-small * 0.75;
+  transition: all 200ms ease-out;
+
+  svg {
+    path {
+      fill: white;
+    }
+  }
+}
+
+#profile-star {
+  width: 80%;
+  height: 80%;
+}
+
+.profile-link__right {
+  opacity: 0;
+  transition: all 200ms ease-out;
+
+  path {
+    fill: white;
+  }
+}
+
+.profile-logout {
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+    background: $dark-blue;
+    padding: $spacer-small * 0.5;
+
+    .profile-link__icon-box {
+      background: $blue;
+    }
+  }
+}

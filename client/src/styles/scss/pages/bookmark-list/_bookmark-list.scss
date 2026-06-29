@@ -1,0 +1,59 @@
+// Bookmark List Page Styles
+.bookmark-page {
+  .movies-container {
+    width: 100%;
+    gap: $spacer-md $spacer * 1.15;
+  }
+
+  .hero__bookmark {
+    &:hover {
+      svg {
+        transform: scale(0.9);
+
+        path {
+          fill: rgba($yellow, 0.65);
+        }
+      }
+    }
+  }
+
+  .list-page__title {
+    margin-bottom: 0;
+  }
+}
+
+.bookmark-page__header {
+  margin-bottom: $spacer-md * 1.5;
+}
+
+.bookmark-page__btn {
+  outline: none;
+  border: 2px solid $teal;
+  background: transparent;
+  color: $teal;
+  margin-left: $spacer;
+  border-radius: 25px;
+  font-weight: bold;
+  padding: $spacer-small * 0.35 $spacer;
+  transition: all 200ms ease-out;
+
+  svg {
+    margin-right: $spacer-small * 0.5;
+
+    path {
+      fill: $teal;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $teal;
+    color: white;
+
+    svg {
+      path {
+        fill: white;
+      }
+    }
+  }
+}

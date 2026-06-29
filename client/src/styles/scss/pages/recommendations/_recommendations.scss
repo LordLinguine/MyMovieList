@@ -1,0 +1,58 @@
+// Recommendations Page Styles
+.rec-page {
+  padding: $spacer-lg * 1.75 $padding;
+
+  main {
+    align-items: flex-start;
+  }
+}
+
+.rec-page__title {
+  color: white;
+  font-size: $lg-fs * 1.25;
+  margin-bottom: $spacer * 1.5;
+
+  span {
+    color: $blue;
+  }
+}
+
+.rec-page__genre {
+  text-decoration: none;
+  color: $blue;
+  background: transparent;
+  border-radius: 25px;
+  border: 2px solid $blue;
+  padding: $spacer-small * 0.35 $spacer;
+  font-size: $sm-fs;
+  margin-right: $spacer-small * 0.75;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $blue;
+    color: white;
+    transform: scale(0.9);
+  }
+}
+
+.rec-movies-list {
+  margin-top: $spacer-md * 1.25;
+
+  .movies-list {
+    width: 100%;
+    margin: none;
+    justify-content: flex-start;
+    gap: $spacer * 1.5 $spacer;
+  }
+}
+
+.rec-movie-card__rating {
+  margin-top: $spacer;
+  color: white;
+  font-size: $md-fs;
+
+  svg {
+    margin-right: $spacer-small * 0.5;
+  }
+}

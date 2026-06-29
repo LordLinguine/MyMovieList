@@ -1,0 +1,347 @@
+// Settings Page
+.settings-page {
+  padding: $spacer-lg * 1.75 $padding;
+
+  main {
+    align-items: flex-start;
+  }
+
+  .right-side {
+    margin-left: $spacer * 1.5;
+  }
+}
+
+.settings-page__title {
+  color: white;
+  font-size: $lg-fs * 1.25;
+  margin-bottom: $spacer-md;
+}
+
+// Auth Info & User Info
+.auth-info,
+.user-info,
+.user-actions {
+  width: 40vw;
+  background: $blue-gray;
+  border-radius: 5px;
+  padding: $spacer * 1.15;
+  margin-bottom: $spacer * 1.5;
+}
+
+.auth-info__title,
+.user-info__title,
+.user-actions__title {
+  color: white;
+  font-size: $md-fs;
+  margin-bottom: $spacer;
+}
+
+.auth-info__text,
+.user-info__text {
+  color: lightgrey;
+
+  strong {
+    margin-right: $spacer-small * 0.25;
+  }
+
+  svg {
+    $s: 1.5rem;
+    width: $s;
+    height: $s;
+    color: $teal;
+    margin-right: $spacer-small * 0.5;
+
+    path {
+      fill: $teal;
+      color: $teal;
+    }
+  }
+}
+
+// Profile Picture
+.user-info__profilePic-box {
+  margin-top: $spacer * 1.5;
+}
+
+.user-info__profilePic {
+  $s: 6.5rem;
+  width: $s;
+  height: $s;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 2.5px rgba(black, 0.15);
+}
+
+.user-info__none {
+  $s: 6.5rem;
+  width: $s;
+  height: $s;
+  border-radius: 5px;
+  background: lightgrey;
+  color: grey;
+}
+
+.user-info__edit {
+  outline: none;
+  border: 2px solid $teal;
+  color: $teal;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: $spacer-small * 0.35 $spacer * 1.5;
+  background: transparent;
+  margin-left: $spacer;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $teal;
+    color: white;
+  }
+}
+
+// User Actions
+.user-actions__desc {
+  width: 60ch;
+  color: $yellow;
+  line-height: $spacer;
+  margin-bottom: $spacer-small * 1.5;
+}
+
+.user-actions__delete {
+  outline: none;
+  border: none;
+  background: $red;
+  color: white;
+  border-radius: 25px;
+  padding: $spacer-small * 0.5 $spacer-md;
+  font-weight: 600;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+  }
+}
+
+// Warning Popup
+.warning-popup,
+.profile-pic-popup,
+.edit-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(black, 0.75);
+  z-index: 15000;
+}
+
+.warning-popup__box,
+.profile-pic-popup__box,
+.edit-popup__box {
+  width: 30vw;
+  background: $blue-gray;
+  border-radius: 5px;
+  padding: $spacer * 1.5;
+}
+
+.warning-popup__title,
+.profile-pic-popup__title,
+.edit-popup__title {
+  color: white;
+  font-size: $md-fs;
+  text-align: center;
+  margin-bottom: $spacer-small;
+}
+
+.warning-popup__desc {
+  color: $yellow;
+  text-align: center;
+  line-height: $spacer;
+  margin-bottom: $spacer-small;
+}
+
+.warning-popup__input {
+  outline: none;
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  background: transparent;
+  width: 100%;
+  text-align: center;
+  padding: $spacer-small * 0.5 $spacer;
+}
+
+.warning-popup__error {
+  width: 100%;
+  color: $red;
+  margin-top: $spacer-small;
+
+  svg {
+    margin-right: $spacer-small * 0.5;
+
+    path {
+      fill: $red;
+    }
+  }
+}
+
+.warning-popup__row {
+  margin-top: $spacer * 1.5;
+}
+
+.warning-popup__delete {
+  outline: none;
+  border: 2px solid $red;
+  color: $red;
+  font-weight: 600;
+  background: transparent;
+  border-radius: 25px;
+  padding: $spacer-small * 0.5 $spacer-md;
+  margin-right: $spacer;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $red;
+    color: white;
+  }
+}
+
+.warning-popup__cancel {
+  outline: none;
+  border: 2px solid $blue;
+  color: white;
+  font-weight: 600;
+  background: $blue;
+  border-radius: 25px;
+  padding: $spacer-small * 0.5 $spacer-md;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $dark-blue;
+    border-color: $dark-blue;
+  }
+}
+
+.warning-popup__google {
+  margin-top: $spacer-small * 1.25;
+}
+
+// Image File Input Popup
+.profile-pic-popup__input-box {
+  margin-top: $spacer;
+  margin-bottom: $spacer-md;
+}
+
+.profile-pic-popup__empty {
+  $s: 6.5rem;
+  width: $s;
+  height: $s;
+  border-radius: 5px;
+  background: lightgrey;
+  color: grey;
+  margin-bottom: $spacer-small * 1.5;
+}
+
+.profile-pic-popup__preview {
+  $s: 6.5rem;
+  width: $s;
+  height: $s;
+  border-radius: 5px;
+  background: lightgrey;
+  margin-bottom: $spacer-small * 0.5;
+}
+
+.profile-pic-popup__preview-name {
+  color: lightgrey;
+  font-weight: 400;
+  margin-bottom: $spacer-small * 1.25;
+}
+
+.profile-pic-popup__input {
+  display: inline-block;
+  border: 2px solid $teal;
+  padding: $spacer-small * 0.5 $spacer-md;
+  border-radius: 25px;
+  color: $teal;
+  font-size: $sm-fs;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+
+  input[type="file"] {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $teal;
+    color: white;
+  }
+}
+
+.profile-pic-popup__save,
+.profile-pic-popup__cancel,
+.edit-popup__save,
+.edit-popup__cancel {
+  outline: none;
+  border: 2px solid $blue;
+  background: transparent;
+  color: $blue;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: $spacer-small * 0.5 $spacer-md;
+  margin-right: $spacer-small;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $blue;
+    color: white;
+  }
+}
+
+.profile-pic-popup__cancel,
+.edit-popup__cancel {
+  border-color: $red;
+  color: $red;
+  margin-right: 0;
+
+  &:hover {
+    cursor: pointer;
+    background: $red;
+    color: white;
+  }
+}
+
+// Edit Username Popup
+.edit-popup__box {
+  input {
+    width: 100%;
+    outline: none;
+    border: 2px solid white;
+    padding: $spacer-small * 0.5 $spacer;
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    color: white;
+    margin-top: $spacer-small * 0.75;
+  }
+}
+
+.edit-popup__error {
+  color: red;
+  margin-top: $spacer-small * 0.75;
+
+  svg {
+    margin-right: $spacer-small * 0.25;
+
+    path {
+      fill: red;
+    }
+  }
+}
+
+.edit-popup__btns {
+  margin-top: $spacer;
+}
